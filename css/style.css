@@ -1,0 +1,59 @@
+.bg-main {
+  background-color: #F9D459;
+  height: 100vh;
+  padding: 100px 0;
+}
+.bg-main .wrapper-board {
+  background-color: rgba(253, 238, 240, 0.8);
+  max-width: 400px;
+  height: 625px;
+  border-radius: 50px;
+  padding: 20px 10px;
+  margin: 0 auto;
+  box-shadow: 0 12px 24px rgba(0, 0, 0, 0.16);
+}
+.bg-main .board {
+  display: grid;
+  justify-content: center;
+  align-items: center;
+  grid-template-columns: repeat(3, auto);
+  margin: 0 auto;
+  margin-bottom: 50px;
+}
+.bg-main .board__cell {
+  width: 100px;
+  max-width: 100px;
+  height: 100px;
+  background-color: #F22853;
+  border: 1px dashed white;
+}
+.bg-main .board__cell:first-child {
+  border-top-left-radius: 20px;
+}
+.bg-main .board__cell:last-child {
+  border-bottom-right-radius: 20px;
+}
+.bg-main .board__cell:nth-child(3) {
+  border-top-right-radius: 20px;
+}
+.bg-main .board__cell:nth-child(7) {
+  border-bottom-left-radius: 20px;
+}
+.bg-main .board__cell:first-child, .bg-main .board__cell:nth-child(2), .bg-main .board__cell:nth-child(3) {
+  border-top: none;
+}
+.bg-main .board__cell:nth-child(3n+1) {
+  border-left: none;
+}
+.bg-main .board__cell:nth-child(3n+3) {
+  border-right: none;
+}
+.bg-main .board__cell:last-child, .bg-main .board__cell:nth-child(8), .bg-main .board__cell:nth-child(7) {
+  border-bottom: none;
+}
+.bg-main .board__cell--btn {
+  background-color: transparent;
+  width: 100%;
+  height: 100%;
+  border: none;
+}/*# sourceMappingURL=style.css.map */
