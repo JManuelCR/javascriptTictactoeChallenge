@@ -1,64 +1,66 @@
 let board = document.querySelectorAll(".board button");
 let isActive = false;
+let turnCounter = 1;
+let playerTurn = 0;
+const winner = [
+  [0, 1, 2],
+  [3, 4, 5],
+  [6, 7, 8],
+  [0, 3, 6],
+  [1, 4, 7],
+  [2, 5, 8],
+  [0, 4, 8],
+  [2, 4, 6]
+];
+
+
+console.log(winner);
 
 for (let i = 0; i < board.length; i++) {
-  const buttons = board[i].addEventListener('click', (event) => {
+  board[i].addEventListener('click', (event) => {
+    event.preventDefault();
+    
+    console.log(`Boton: ${board[i].id}`);
+    
+    let jugadorActual = actualPlayer();
+    if(jugadorActual == 1){  
+        board[i].innerText = 'X';
+        board[i].disabled = true;
+        console.log(winner[0]);
+    } else if(jugadorActual == 2) { 
+        board[i].innerText = 'O';
+        board[i].disabled = true;
+    } else {
+        console.log('No funcionó');
+    }
+    console.log(playerTurn);
     mensaje = `Click en el boton: ${i}`
     console.log(mensaje);
+    counter += 1;
+    console.log(counter);
+    
   })
 }
 
+function actualPlayer ( )  {
+  if ( turnCounter%2 !=  0 ){
+    playerTurn = 1;
+  }else {
+    playerTurn = 2;
+  }
+  turnCounter += 1;
 
+  return playerTurn;
+}
 
-// for (let i = 0; i < board.length; i++) {
-//   const element = board[i].addEventListener("click", (e) => {
-//     e.preventDefault();
-//     e.target;
-//     console.log(element);
-//   });
-// }
+let winerCheck = () => {
+  let 
+//
+  const win = winner[i];
+  const a = board[win[0]];
+  const b = board[win[1]];
+  const c = board[win[2]];
+}
+//a ===
+        
 
-// let circle = 1;
-// let square = 2;
-
-// let positions = [0, 0, 0, 0, 0, 0, 0, 0, 0];
-
-// let btn1 = positions[0];
-// let btn2 = positions[1];
-// let btn3 = positions[2];
-// let btn4 = positions[3];
-// let btn5 = positions[4];
-// let btn6 = positions[5];
-// let btn7 = positions[6];
-// let btn8 = positions[7];
-// let btn9 = positions[8];
-
-
-// btn1.addEventListener('')
-
-// let referi = false;
-
-// let primerJugada = true;
-
-// let ganador = 0;
-
-// // function disabledButton(e) {
-// //     isClick = false;
-
-// //     if(e.target === isClick){
-// //         ///
-// //     } else if(isClick = true){
-// //         button.disabled
-// //     }
-
-// // }
-
-// // function isFanador(){
-// //     contadorCirculor= 0
-// //     (contadorCirculor == 3){
-// //         ya ganos
-// //     }
-// // }
-
-// // const buttons = document.querySelectorAll('button');
-// // buttons.forEach(button => button.addEventListener('click', event => console.log(event)));

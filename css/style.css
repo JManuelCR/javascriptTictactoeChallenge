@@ -1,7 +1,67 @@
+body {
+  font-family: "Cinzel Decorative", cursive;
+}
+
 .bg-main {
   background-color: #F9D459;
   height: 100vh;
-  padding: 100px 0;
+  padding: 80px 0;
+}
+.bg-main .players {
+  padding-top: 20px;
+}
+.bg-main .players__card {
+  width: 90px;
+  padding: 8px 5px;
+  background-color: rgb(255, 254, 255);
+  box-shadow: 0 12px 24px rgba(0, 0, 0, 0.16);
+  border-radius: 8px;
+}
+.bg-main .players__card .avatar {
+  width: 42px;
+  position: absolute;
+  left: 50%;
+  transform: translateX(-50%) translateY(-50%);
+}
+.bg-main .players__card .avatar img {
+  width: 100%;
+}
+.bg-main .players__card .namePlayer {
+  padding-top: 25px;
+  text-align: center;
+  font-size: 12px;
+}
+.bg-main .players__card .wrapper-icon {
+  background-color: #F22853;
+  height: 30px;
+  border-radius: 12px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  box-shadow: 0 12px 24px rgba(0, 0, 0, 0.16);
+}
+.bg-main .players__card .wrapper-icon--x {
+  color: #F9D459;
+  font-size: 18px;
+  font-weight: bold;
+  box-shadow: 0 12px 24px rgba(0, 0, 0, 0.16);
+}
+.bg-main .players__card .wrapper-icon--o {
+  color: #ffffff;
+  font-size: 18px;
+  font-weight: bold;
+  box-shadow: 0 12px 24px rgba(0, 0, 0, 0.16);
+}
+.bg-main .players__round {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+.bg-main .players__round .ronda {
+  width: 80px;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
 }
 .bg-main .wrapper-board {
   background-color: rgba(253, 238, 240, 0.8);
@@ -12,12 +72,19 @@
   margin: 0 auto;
   box-shadow: 0 12px 24px rgba(0, 0, 0, 0.16);
 }
+.bg-main .wrapper-board .btn-restart {
+  background-color: rgba(247, 176, 41, 0.7);
+  border-color: rgba(247, 176, 41, 0.7);
+}
+.bg-main .wrapper-board .btn-restart:hover {
+  background-color: rgb(247, 176, 41);
+}
 .bg-main .board {
   display: grid;
   justify-content: center;
   align-items: center;
   grid-template-columns: repeat(3, auto);
-  margin: 0 auto;
+  margin-top: 40px;
   margin-bottom: 50px;
 }
 .bg-main .board__cell {
