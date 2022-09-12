@@ -1,5 +1,6 @@
 let board = document.querySelectorAll(".board button");
 let isActive = false;
+let counter = 1;
 
 for (let i = 0; i < board.length; i++) {
   const buttons = board[i].addEventListener('click', (event) => {
@@ -8,6 +9,15 @@ for (let i = 0; i < board.length; i++) {
   })
 }
 
+let actualPlayer = ( counter ) => {
+    if ( counter%2 !=  0 ){
+      actualPlayer = 1;
+    }else {
+      actualPlayer = 2;
+    }
+    counter += 1;
+    return;
+}
 
 
 // for (let i = 0; i < board.length; i++) {
