@@ -1,16 +1,19 @@
 let board = document.querySelectorAll(".board button");
 let isActive = false;
 let counter = 0;
+const player1 = document.querySelector('.player1');
+const player2 = document.querySelector('.player2');
+let activePlayer = player1;
 
-const winner = '012-345-678-036-147-258-048-246' 
-let winner2 = '012-345-678-036-147-258-048-246' 
+const startPositions = '012-345-678-036-147-258-048-246' 
+let winner = '012-345-678-036-147-258-048-246' 
 
 
-console.log(winner2);
+console.log(winner);
 
 document.getElementById('reset').addEventListener('click', (event) => {
   event.preventDefault();
-  reset();
+  reset()
 })
 
 for (let i = 0; i < board.length; i++) {
@@ -35,10 +38,22 @@ function movement(i,jugadorActual,marca){
   board[i].innerText = marca;
   board[i].disabled = true;
   board[i].style.color = 'white';
-  winner2 = winner2.replaceAll(i+'',marca)
-  if(winner2.indexOf(marca+marca+marca) > -1){
+  winner = winner.replaceAll(i+'',marca)
+  if(winner.indexOf(marca+marca+marca) > -1){
     console.log(jugadorActual+' wins!!!')
+    activePlayer.querySelector('.wrapper-icon').className += " winner"
+    document.querySelector('.w-win').className += " wins"
     disabledButtons(true);
+  }else{
+    if ( counter%2 ==  0 ){
+      player2.className += " activePlayer";
+      player1.classList.remove("activePlayer")
+      activePlayer = player2;
+    }else {
+      player1.className += " activePlayer";
+      player2.classList.remove("activePlayer")
+      activePlayer = player1;
+    }
   }
 }
 
@@ -61,9 +76,8 @@ function reset(){
     board[i].innerText = '';
     board[i].disabled = false;
   }
-  winner2 = winner;
+  winner = startPositions;
   counter = 0;
 }
 
-        
 

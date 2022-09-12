@@ -23,11 +23,11 @@
             <div class="container wrapper-board">
                 <div class="row players p-2 mx-auto">
                     <div class="col-4">
-                        <div class="players__card position-relative">
+                        <div class="players__card position-relative player1 activePlayer">
                             <div class="avatar">
                                 <img src="./img/profile.png" alt="Player 1">
                             </div>
-                            <p class="namePlayer">Jonatan</p>
+                            <p class="namePlayer">Jona</p>
                             <div class="wrapper-icon">
                                 <strong class="wrapper-icon--x">X</strong>
                             </div>
@@ -42,7 +42,7 @@
                         </div>
                     </div>
                     <div class="col-4">
-                        <div class="players__card position-relative">
+                        <div class="players__card position-relative player2">
                             <div class="avatar">
                                 <img src="./img/woman.png" alt="Player 1">
                             </div>
@@ -53,6 +53,9 @@
                         </div>
 
                     </div>
+                </div>
+                <div class="mx-auto text-center mt-4 d-none w-win">
+                    <div>WINS!</div>
                 </div>
                 <div class="row ">
                     <div class="board" id="board">
