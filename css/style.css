@@ -138,4 +138,11 @@ body {
   font-weight: 900;
   font-size: medium;
   display: block !important;
+}
+
+.losers {
+  color: red;
+  font-weight: 900;
+  font-size: medium;
+  display: block !important;
 }/*# sourceMappingURL=style.css.map */
