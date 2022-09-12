@@ -37,6 +37,21 @@ body{
                 font-size: 12px;
             }
 
+            .newPlayer{
+                background-color: rgb(241, 238, 142);
+                border: solid white;
+                width: 64px;
+                height: 20px;
+                border-radius: 10px;
+                display: flex;
+                justify-content: center;
+                align-items: flex-end;
+                margin-top: 30px;
+                margin-bottom: 10px;
+                margin-left: 8px;
+                font-size: small;
+            }
+
             .wrapper-icon {
                 background-color: #F22853;
                 height: 30px;
