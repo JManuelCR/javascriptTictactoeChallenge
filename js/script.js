@@ -9,6 +9,8 @@ const startPositions = '012-345-678-036-147-258-048-246'
 let winner = '012-345-678-036-147-258-048-246' 
 
 
+
+
 console.log(winner);
 
 
@@ -71,6 +73,8 @@ function actualPlayer ()  { //función para saber si el actual player es el 1 o 
   }
 }
 
+let name1 = document.getElementsByClassName("newPlayer1");
+let name2 = document.getElementsByClassName("newPlayer2");
 
 //reset button
 function reset(){ //resetear juego
@@ -86,6 +90,7 @@ function reset(){ //resetear juego
   player1.className += " activePlayer";                                  //se vuelve a hacer el scale en el jugador 1
   player2.classList.remove("activePlayer")
   activePlayer = player1;
+
 }
 
 document.getElementById('reset').addEventListener('click', (event) => {
